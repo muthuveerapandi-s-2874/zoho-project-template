@@ -1,19 +1,4 @@
 ---
-description: 
-alwaysApply: true
----
-
----
-description: 
-alwaysApply: true
----
-
----
-description: 
-alwaysApply: true
----
-
----
 alwaysApply: true
 ---
 
@@ -24,13 +9,69 @@ These rules are MANDATORY and apply to every page in the project.
 
 ---
 
-## Design System Rules
+## Design System Imports (REQUIRED on every page)
 
-- Always import `ods-design-system.css` (located at project root).
-- Use ONLY CSS variables defined in `ods-design-system.css`.
+Every HTML page MUST import two CSS files in this exact order:
+
+1. **`design-system/ods-design-system.css`** — Zoho-wide tokens, semantics, and components.
+2. **`design-system/themes/<product>.css`** — the product theme matching this project's product (e.g. `shift.css`, `crm.css`, `books.css`).
+
+```html
+<link rel="stylesheet" href="design-system/ods-design-system.css">
+<link rel="stylesheet" href="design-system/themes/shift.css">
+```
+
+Never reverse the order — the theme depends on the base.
+
+---
+
+## Semantic vs Raw Tokens
+
+The design system defines two layers of CSS variables. **Always prefer semantic tokens.**
+
+### Semantic tokens (use these)
+
+Express design intent — what a value is FOR.
+
+| Token | What it's for |
+|---|---|
+| `var(--cta)` | Primary CTA fill — ODS blue, same on every Zoho product |
+| `var(--cta-hover)`, `var(--cta-active)`, `var(--cta-focus)` | CTA states |
+| `var(--canvas)` | Page background, default surface |
+| `var(--brand)` | Product brand color (banners, accents, links) — varies per product |
+| `var(--brand-hover)` | Hover state for brand surfaces |
+| `var(--secondary)` | Dark theme section background |
+| `var(--fg-primary)` | Headlines |
+| `var(--fg-secondary)` | Sub-headlines |
+| `var(--fg-tertiary)` | Body paragraphs |
+| `var(--fg-muted)` | Decorative / disabled — fails 4.5:1, never readable text |
+| `var(--success)`, `var(--warning)`, `var(--error)`, `var(--info)` | Status colors |
+| `var(--line)` | Card borders, neutral strokes |
+| `var(--line-active)` | Active flow paths, focus borders |
+| `var(--light-gradient-top)`, `var(--light-gradient-bottom)` | Light banner gradient stops |
+
+### Raw tokens (use only when no semantic name exists)
+
+Express what a value IS — a specific shade.
+
+| Pattern | Example |
+|---|---|
+| `var(--color-<family>-<shade>)` | `var(--color-orange-300)` for a specific accent |
+| `var(--<scale>-<shade>)` (from product theme) | `var(--primary-700)`, `var(--gray-400)`, `var(--slate-500)` |
+| `var(--space-<size>)` | `var(--space-md)` |
+| `var(--radius-<size>)` | `var(--radius-sm)` |
+
+Reach for raw tokens only when you need a specific shade and no semantic name covers your case.
+
+---
+
+## Hard Rules
+
+- Use ONLY CSS variables defined by the design system (semantic OR raw).
 - Never hardcode colors, spacing, or font sizes.
-- Design system files are READ-ONLY.
+- The `design-system/` folder is READ-ONLY.
 - If a token is missing, ASK before creating one.
+- **CTA fill is always `var(--cta)`** (ODS blue). Never use `var(--brand)` on a button — that's a hard violation. The brand color is for surfaces, not CTAs.
 
 ---
 
