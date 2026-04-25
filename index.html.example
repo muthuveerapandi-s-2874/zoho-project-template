@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+    REQUIRED: Import the design system stylesheet.
+    All tokens (colors, typography, spacing, radius, CTA) come from this file.
+    Do NOT redefine these values locally.
+  -->
+  <link rel="stylesheet" href="ods-design-system.css">
+
+  <title>Zoho Project — Reference Page</title>
+
+  <!--
+    Page-level styles ONLY scope under parent classes.
+    Never write styles directly on tags.
+    Never use !important, *, or inline styles.
+  -->
+  <style>
+    /* Section-scoped styles use the section's class as the parent. */
+    .zwc-hero .inner-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      padding: var(--space-2xl) 0;
+    }
+
+    .zwc-features .inner-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+      padding: var(--space-xl) 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!--
+    SECTION STRUCTURE (mandatory for every section):
+
+      <section class="zwc-...">
+        <div class="content-wrap">     <- max-width only
+          <div class="inner-content">  <- spacing/layout here
+            ...content...
+          </div>
+        </div>
+      </section>
+
+    Do NOT apply padding, gap, or flex on `content-wrap`.
+  -->
+
+  <header class="zwc-site-header">
+    <div class="content-wrap">
+      <div class="inner-content">
+        <nav>
+          <!-- Navigation goes here. Use semantic <nav>, not <div>. -->
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero section example -->
+    <section class="zwc-hero">
+      <div class="content-wrap">
+        <div class="inner-content">
+          <h1>Headline goes here</h1>
+          <p>Subheading paragraph using design system typography.</p>
+          <a href="#" class="btn-primary">Primary action</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature section example -->
+    <section class="zwc-features">
+      <div class="content-wrap">
+        <div class="inner-content">
+          <h2>Feature group heading</h2>
+
+          <!-- Use semantic list when content is a list -->
+          <ul>
+            <li>
+              <h3>Feature one</h3>
+              <p>Feature description.</p>
+            </li>
+            <li>
+              <h3>Feature two</h3>
+              <p>Feature description.</p>
+            </li>
+            <li>
+              <h3>Feature three</h3>
+              <p>Feature description.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image example with mandatory attributes -->
+    <section class="zwc-screenshot">
+      <div class="content-wrap">
+        <div class="inner-content">
+          <!--
+            REQUIRED: width, height, alt, and loading or fetchpriority.
+            Banner / above-the-fold images: fetchpriority="high"
+            All other images: loading="lazy"
+          -->
+          <img
+            src="example-screenshot.png"
+            alt="Product screenshot showing the main dashboard view"
+            width="1200"
+            height="800"
+            loading="lazy"
+          >
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="zwc-site-footer">
+    <div class="content-wrap">
+      <div class="inner-content">
+        <!-- Footer content -->
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

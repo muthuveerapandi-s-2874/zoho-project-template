@@ -1,0 +1,124 @@
+---
+alwaysApply: true
+---
+
+# Zoho Project Coding Rules
+
+This project uses a centralized design system (ODS).
+These rules are MANDATORY and apply to every page in the project.
+
+---
+
+## Design System Rules
+
+- Always import `ods-design-system.css` (located at project root).
+- Use ONLY CSS variables defined in `ods-design-system.css`.
+- Never hardcode colors, spacing, or font sizes.
+- Design system files are READ-ONLY.
+- If a token is missing, ASK before creating one.
+
+---
+
+## Figma to Code Rules
+
+This project follows strict Figma-to-code implementation rules.
+
+### General
+
+- Always inspect Figma layer names before writing HTML.
+- Semantic correctness is mandatory.
+- Accessibility (WCAG 2.1 AA) is mandatory.
+
+---
+
+## HTML Rules
+
+1. **Layer name → semantic element.** If a Figma layer name exactly matches a
+   semantic HTML element (`span`, `ul`, `li`, `small`, `label`), you MUST use
+   that HTML element.
+
+   ```
+   Layer name "span" → <span>content</span>
+   ```
+
+2. **`zwc-` prefix → class name, not element.** Layer names starting with
+   `zwc-` represent CLASS NAMES, never HTML elements.
+
+   ```
+   zwc-banner-wrap → <div class="zwc-banner-wrap">
+   ```
+
+3. **No `<div>` when a semantic element is appropriate.** Use `section`,
+   `header`, `nav`, `main`, `article`, `footer`, `ul`, `li`, `p`, etc. wherever
+   the content calls for them.
+
+4. **No purposeless class names.** Avoid patterns like `<p class="banner-para">`.
+   Scope styles using the parent section class instead.
+
+---
+
+## Section Structure (MANDATORY)
+
+Every section MUST follow this exact structure:
+
+```html
+<section class="zwc-section-name">
+  <div class="content-wrap">
+    <div class="inner-content">
+      <!-- section content -->
+    </div>
+  </div>
+</section>
+```
+
+Rules:
+
+- Every section MUST include `content-wrap`.
+- `content-wrap` controls `max-width` ONLY.
+- `inner-content` is used for spacing and layout.
+- Do NOT apply `padding`, `gap`, or `flex` on `content-wrap`.
+
+---
+
+## CSS Rules
+
+- Do NOT use `!important`.
+- Do NOT write inline styles.
+- Do NOT use the universal selector (`*`).
+- Do NOT write styles directly on HTML tags. Always scope styles under a
+  parent class.
+- Do NOT add common styles to `body` (no `font-size`, `color`, `line-height`,
+  `spacing`).
+- Do NOT use `<br>` tags for spacing.
+- Do NOT add unnecessary animations or transitions.
+
+---
+
+## Layout Rules
+
+- Use ONLY `display: flex` for layouts.
+- Do NOT use `grid`, position-based layouts, or `float`.
+
+---
+
+## Typography
+
+- Do NOT use `font-weight` directly.
+- Always use predefined font-family variables from the design system.
+
+---
+
+## Images
+
+- Banner images MUST use `fetchpriority="high"`.
+- Non-critical images MUST use `loading="lazy"`.
+- Always specify `width` and `height`.
+- Always provide meaningful `alt` text.
+
+---
+
+## Accessibility
+
+- Semantic HTML is mandatory.
+- ARIA attributes must be added where required.
+- Follow WCAG 2.1 AA guidelines strictly.

@@ -1,0 +1,1607 @@
+/**
+ * ODS Design System - Complete CSS File
+ * 
+ * This file contains all design system tokens in a single CSS file:
+ * - Colors
+ * - Typography
+ * - Grid System
+ * - Elevation & Radius
+ * - Sizing Tokens
+ * - Button CTA
+ * 
+ * Sources:
+ * - color-palette.json
+ * - typography.json
+ * - grid-system.json
+ * - elevation-radius.json
+ * - sizing-tokens.json
+ * - button-cta.json (cta-component.json)
+ */
+
+/* ==========================================================================
+   COLORS
+   ========================================================================== */
+
+:root {
+  /* Red */
+  --color-red-50: #FFE5E4;
+  --color-red-100: #FFCCCC;
+  --color-red-200: #FF999A;
+  --color-red-300: #FF6B6B;
+  --color-red-400: #FF3938;
+  --color-red-500: #FF0405;
+  --color-red-600: #D10000;
+  --color-red-700: #9F0101;
+  --color-red-800: #660000;
+  --color-red-900: #330000;
+  --color-red-950: #190001;
+
+  /* Orange */
+  --color-orange-50: #FFF5E5;
+  --color-orange-100: #FFEBCB;
+  --color-orange-200: #FFD99E;
+  --color-orange-300: #FFC46B;
+  --color-orange-400: #FFB13D;
+  --color-orange-500: #FF9E08;
+  --color-orange-600: #D68100;
+  --color-orange-700: #9E5F01;
+  --color-orange-800: #6B4000;
+  --color-orange-900: #331F00;
+  --color-orange-950: #180F00;
+
+  /* Deep Orange */
+  --color-deep-orange-50: #FFEEE5;
+  --color-deep-orange-100: #FFDFCB;
+  --color-deep-orange-200: #FFBE9A;
+  --color-deep-orange-300: #FFA16B;
+  --color-deep-orange-400: #FF8138;
+  --color-deep-orange-500: #FF6105;
+  --color-deep-orange-600: #D14D00;
+  --color-deep-orange-700: #9E3A01;
+  --color-deep-orange-800: #662500;
+  --color-deep-orange-900: #331300;
+  --color-deep-orange-950: #190900;
+
+  /* Yellow */
+  --color-yellow-50: #FFFCEB;
+  --color-yellow-100: #FFF9DB;
+  --color-yellow-200: #FFF3B3;
+  --color-yellow-300: #FEEA85;
+  --color-yellow-400: #FEE253;
+  --color-yellow-500: #FED70B;
+  --color-yellow-600: #EAC301;
+  --color-yellow-700: #CBA901;
+  --color-yellow-800: #AD9001;
+  --color-yellow-900: #7A6600;
+  --color-yellow-950: #564800;
+
+  /* Green */
+  --color-green-50: #E5FFE8;
+  --color-green-100: #CCFFD0;
+  --color-green-200: #99FFA2;
+  --color-green-300: #6CFF77;
+  --color-green-400: #37FF49;
+  --color-green-500: #03FF17;
+  --color-green-600: #04D111;
+  --color-green-700: #019E0D;
+  --color-green-800: #00660A;
+  --color-green-900: #003203;
+  --color-green-950: #011902;
+
+  /* Lime */
+  --color-lime-50: #FDFFE4;
+  --color-lime-100: #FAFFCC;
+  --color-lime-200: #F5FF9D;
+  --color-lime-300: #F0FF6A;
+  --color-lime-400: #EBFF3E;
+  --color-lime-500: #E6FF0A;
+  --color-lime-600: #C1D601;
+  --color-lime-700: #8E9F00;
+  --color-lime-800: #606B01;
+  --color-lime-900: #2E3300;
+  --color-lime-950: #171900;
+
+  /* Light Blue */
+  --color-light-blue-50: #E5F7FF;
+  --color-light-blue-100: #CDEEFF;
+  --color-light-blue-200: #99DDFF;
+  --color-light-blue-300: #6BCEFF;
+  --color-light-blue-400: #38BDFF;
+  --color-light-blue-500: #09ABFF;
+  --color-light-blue-600: #008BD1;
+  --color-light-blue-700: #01699E;
+  --color-light-blue-800: #004466;
+  --color-light-blue-900: #002232;
+  --color-light-blue-950: #001119;
+
+  /* Cyan */
+  --color-cyan-50: #E6FCFF;
+  --color-cyan-100: #CCF8FE;
+  --color-cyan-200: #9FF2FD;
+  --color-cyan-300: #6EEBFC;
+  --color-cyan-400: #40E5FB;
+  --color-cyan-500: #10DFFA;
+  --color-cyan-600: #07BAD2;
+  --color-cyan-700: #03899C;
+  --color-cyan-800: #035E69;
+  --color-cyan-900: #012C32;
+  --color-cyan-950: #011619;
+
+  /* Teal */
+  --color-teal-50: #F5FFFE;
+  --color-teal-100: #EBFFFD;
+  --color-teal-200: #CCFFFB;
+  --color-teal-300: #ADFFF9;
+  --color-teal-400: #75FFF4;
+  --color-teal-500: #0FFFEB;
+  --color-teal-600: #01E6D2;
+  --color-teal-700: #00CCBB;
+  --color-teal-800: #05A79A;
+  --color-teal-900: #008075;
+  --color-teal-950: #015D54;
+
+  /* Purple */
+  --color-purple-50: #EEE5FF;
+  --color-purple-100: #DECCFF;
+  --color-purple-200: #BD99FF;
+  --color-purple-300: #9F6BFF;
+  --color-purple-400: #7E38FF;
+  --color-purple-500: #5E05FF;
+  --color-purple-600: #4900D1;
+  --color-purple-700: #37009F;
+  --color-purple-800: #240066;
+  --color-purple-900: #130033;
+  --color-purple-950: #090019;
+
+  /* Pink */
+  --color-pink-50: #FEE7EE;
+  --color-pink-100: #FECEDF;
+  --color-pink-200: #FB9DBC;
+  --color-pink-300: #F8729F;
+  --color-pink-400: #F6417D;
+  --color-pink-500: #F4115D;
+  --color-pink-600: #C80B49;
+  --color-pink-700: #970736;
+  --color-pink-800: #620423;
+  --color-pink-900: #310212;
+  --color-pink-950: #180109;
+
+  /* Blue */
+  --color-blue-50: #E4EDFF;
+  --color-blue-100: #CCDAFF;
+  --color-blue-200: #9AB6FF;
+  --color-blue-300: #6691FF;
+  --color-blue-400: #336DFF;
+  --color-blue-500: #0047FF;
+  --color-blue-600: #003ACC;
+  --color-blue-700: #012B99;
+  --color-blue-800: #001D66;
+  --color-blue-900: #000E33;
+  --color-blue-950: #000719;
+
+  /* Grey */
+  --color-grey-50: #F5F5F5;
+  --color-grey-100: #EBEBEB;
+  --color-grey-200: #D1D1D1;
+  --color-grey-300: #B5B5B5;
+  --color-grey-400: #919191;
+  --color-grey-500: #595959;
+  --color-grey-600: #4F4F4F;
+  --color-grey-700: #454545;
+  --color-grey-800: #383838;
+  --color-grey-900: #262626;
+  --color-grey-950: #1A1A1A;
+
+  /* Dark Grey */
+  --color-dark-grey-50: #1A1A1A;
+  --color-dark-grey-100: #1A1A1A;
+  --color-dark-grey-200: #171717;
+  --color-dark-grey-300: #141414;
+  --color-dark-grey-400: #121212;
+  --color-dark-grey-500: #0F0F0F;
+  --color-dark-grey-600: #0D0D0D;
+  --color-dark-grey-700: #0A0A0A;
+  --color-dark-grey-800: #080808;
+  --color-dark-grey-900: #050505;
+  --color-dark-grey-950: #030303;
+
+  /* Base Colors */
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+
+  /* ==========================================================================
+     TYPOGRAPHY
+     ========================================================================== */
+
+  /* Font Family */
+  --font-family-zoho-puvi: 'Zoho Puvi', sans-serif;
+  --font-family: var(--font-family-zoho-puvi);
+
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Heading H1 */
+  --heading-h1-font-size: 88px;
+  --heading-h1-line-height: 96px;
+  --heading-h1-regular-font-weight: 400;
+  --heading-h1-regular-letter-spacing: -3.52px;
+  --heading-h1-medium-font-weight: 500;
+  --heading-h1-medium-letter-spacing: -3.52px;
+  --heading-h1-semibold-font-weight: 600;
+  --heading-h1-semibold-letter-spacing: -2.64px;
+  --heading-h1-bold-font-weight: 700;
+  --heading-h1-bold-letter-spacing: -2.64px;
+
+  /* Heading H2 */
+  --heading-h2-font-size: 80px;
+  --heading-h2-line-height: 88px;
+  --heading-h2-regular-font-weight: 400;
+  --heading-h2-regular-letter-spacing: -1.6px;
+  --heading-h2-medium-font-weight: 500;
+  --heading-h2-medium-letter-spacing: -1.6px;
+  --heading-h2-semibold-font-weight: 600;
+  --heading-h2-semibold-letter-spacing: -1.6px;
+  --heading-h2-bold-font-weight: 700;
+  --heading-h2-bold-letter-spacing: -1.6px;
+
+  /* Heading H3 */
+  --heading-h3-font-size: 72px;
+  --heading-h3-line-height: 80px;
+  --heading-h3-regular-font-weight: 400;
+  --heading-h3-regular-letter-spacing: -1.44px;
+  --heading-h3-medium-font-weight: 500;
+  --heading-h3-medium-letter-spacing: -2.88px;
+  --heading-h3-semibold-font-weight: 600;
+  --heading-h3-semibold-letter-spacing: -2.16px;
+  --heading-h3-bold-font-weight: 700;
+  --heading-h3-bold-letter-spacing: -2.16px;
+
+  /* Heading H4 */
+  --heading-h4-font-size: 64px;
+  --heading-h4-line-height: 72px;
+  --heading-h4-regular-font-weight: 400;
+  --heading-h4-regular-letter-spacing: -1.28px;
+  --heading-h4-medium-font-weight: 500;
+  --heading-h4-medium-letter-spacing: -2.56px;
+  --heading-h4-semibold-font-weight: 600;
+  --heading-h4-semibold-letter-spacing: -1.92px;
+  --heading-h4-bold-font-weight: 700;
+  --heading-h4-bold-letter-spacing: -1.92px;
+
+  /* Heading H5 */
+  --heading-h5-font-size: 56px;
+  --heading-h5-line-height: 64px;
+  --heading-h5-regular-font-weight: 400;
+  --heading-h5-regular-letter-spacing: -2.24px;
+  --heading-h5-medium-font-weight: 500;
+  --heading-h5-medium-letter-spacing: -1.68px;
+  --heading-h5-semibold-font-weight: 600;
+  --heading-h5-semibold-letter-spacing: -1.68px;
+  --heading-h5-bold-font-weight: 700;
+  --heading-h5-bold-letter-spacing: -1.68px;
+
+  /* Heading H6 */
+  --heading-h6-font-size: 48px;
+  --heading-h6-line-height: 56px;
+  --heading-h6-regular-font-weight: 400;
+  --heading-h6-regular-letter-spacing: -1.92px;
+  --heading-h6-medium-font-weight: 500;
+  --heading-h6-medium-letter-spacing: -0.96px;
+  --heading-h6-semibold-font-weight: 600;
+  --heading-h6-semibold-letter-spacing: -1.44px;
+  --heading-h6-bold-font-weight: 700;
+  --heading-h6-bold-letter-spacing: -1.44px;
+
+  /* Paragraph Large */
+  --paragraph-large-font-size: 40px;
+  --paragraph-large-line-height: 48px;
+  --paragraph-large-regular-font-weight: 400;
+  --paragraph-large-regular-letter-spacing: -1.6px;
+  --paragraph-large-medium-font-weight: 500;
+  --paragraph-large-medium-letter-spacing: -1.2px;
+  --paragraph-large-semibold-font-weight: 600;
+  --paragraph-large-semibold-letter-spacing: -0.8px;
+  --paragraph-large-bold-font-weight: 700;
+  --paragraph-large-bold-letter-spacing: -0.8px;
+
+  /* Paragraph Medium */
+  --paragraph-medium-font-size: 32px;
+  --paragraph-medium-line-height: 40px;
+  --paragraph-medium-regular-font-weight: 400;
+  --paragraph-medium-regular-letter-spacing: -0.96px;
+  --paragraph-medium-medium-font-weight: 500;
+  --paragraph-medium-medium-letter-spacing: -0.96px;
+  --paragraph-medium-semibold-font-weight: 600;
+  --paragraph-medium-semibold-letter-spacing: -0.96px;
+  --paragraph-medium-bold-font-weight: 700;
+  --paragraph-medium-bold-letter-spacing: -0.64px;
+
+  /* Paragraph Regular */
+  --paragraph-regular-font-size: 24px;
+  --paragraph-regular-line-height: 32px;
+  --paragraph-regular-regular-font-weight: 400;
+  --paragraph-regular-regular-letter-spacing: -0.48px;
+  --paragraph-regular-medium-font-weight: 500;
+  --paragraph-regular-medium-letter-spacing: -0.24px;
+  --paragraph-regular-semibold-font-weight: 600;
+  --paragraph-regular-semibold-letter-spacing: -0.24px;
+  --paragraph-regular-bold-font-weight: 700;
+  --paragraph-regular-bold-letter-spacing: -0.24px;
+
+  /* Paragraph Small */
+  --paragraph-small-font-size: 20px;
+  --paragraph-small-line-height: 28px;
+  --paragraph-small-regular-font-weight: 400;
+  --paragraph-small-regular-letter-spacing: -0.4px;
+  --paragraph-small-medium-font-weight: 500;
+  --paragraph-small-medium-letter-spacing: -0.2px;
+  --paragraph-small-semibold-font-weight: 600;
+  --paragraph-small-semibold-letter-spacing: -0.2px;
+  --paragraph-small-bold-font-weight: 700;
+  --paragraph-small-bold-letter-spacing: -0.2px;
+
+  /* Paragraph X-Small */
+  --paragraph-x-small-font-size: 16px;
+  --paragraph-x-small-line-height: 24px;
+  --paragraph-x-small-regular-font-weight: 400;
+  --paragraph-x-small-regular-letter-spacing: -0.32px;
+  --paragraph-x-small-medium-font-weight: 500;
+  --paragraph-x-small-medium-letter-spacing: -0.16px;
+  --paragraph-x-small-semibold-font-weight: 600;
+  --paragraph-x-small-semibold-letter-spacing: -0.16px;
+  --paragraph-x-small-bold-font-weight: 700;
+  --paragraph-x-small-bold-letter-spacing: -0.16px;
+
+  /* Paragraph Tiny */
+  --paragraph-tiny-font-size: 12px;
+  --paragraph-tiny-line-height: 16px;
+  --paragraph-tiny-regular-font-weight: 400;
+  --paragraph-tiny-regular-letter-spacing: -0.12px;
+  --paragraph-tiny-medium-font-weight: 500;
+  --paragraph-tiny-medium-letter-spacing: -0.12px;
+  --paragraph-tiny-semibold-font-weight: 600;
+  --paragraph-tiny-semibold-letter-spacing: 0px;
+  --paragraph-tiny-bold-font-weight: 700;
+  --paragraph-tiny-bold-letter-spacing: 0px;
+
+  /* ==========================================================================
+     GRID SYSTEM
+     ========================================================================== */
+
+  /* Grid Defaults */
+  --grid-columns: 12;
+  --grid-gutter: 24px;
+  --grid-margin: 40px;
+  --grid-type: center;
+
+  /* Desktop (1720px+) */
+  --grid-desktop-columns: 12;
+  --grid-desktop-column-width: 88px;
+  --grid-desktop-gutter: 24px;
+  --grid-desktop-margin: 40px;
+  --grid-desktop-container-width: 1720px;
+
+  /* Desktop Medium (1400px - 1720px) */
+  --grid-desktop-medium-columns: 12;
+  --grid-desktop-medium-column-width: 88px;
+  --grid-desktop-medium-gutter: 24px;
+  --grid-desktop-medium-margin: 40px;
+  --grid-desktop-medium-container-width: 1400px;
+
+  /* Desktop Small (1200px - 1400px) */
+  --grid-desktop-small-columns: 12;
+  --grid-desktop-small-column-width: 56px;
+  --grid-desktop-small-gutter: 32px;
+  --grid-desktop-small-margin: 40px;
+  --grid-desktop-small-container-width: 1200px;
+
+  /* Tablet (992px - 1200px) */
+  --grid-tablet-columns: 12;
+  --grid-tablet-column-width: 48px;
+  --grid-tablet-gutter: 16px;
+  --grid-tablet-margin: 40px;
+  --grid-tablet-container-width: 992px;
+
+  /* Tablet Small (768px - 992px) */
+  --grid-tablet-small-columns: 8;
+  --grid-tablet-small-column-width: 64px;
+  --grid-tablet-small-gutter: 16px;
+  --grid-tablet-small-margin: 40px;
+  --grid-tablet-small-container-width: 768px;
+
+  /* Mobile (576px - 768px) */
+  --grid-mobile-columns: 4;
+  --grid-mobile-column-width: 104px;
+  --grid-mobile-gutter: 16px;
+  --grid-mobile-margin: 40px;
+  --grid-mobile-container-width: 576px;
+
+  /* ==========================================================================
+     ELEVATION & RADIUS
+     ========================================================================== */
+
+  /* Elevation (Shadows) */
+  --elevation-xs: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  --elevation-small: 0px 16px 24px -4px rgba(0, 0, 0, 0.25);
+  --elevation-medium: 0px 24px 48px -8px rgba(0, 0, 0, 0.25);
+  --elevation-large: 0px 40px 80px -16px rgba(0, 0, 0, 0.16);
+  --elevation-xlarge: 12px 56px 112px -20px rgba(0, 0, 0, 0.18);
+
+  /* Radius (Border Radius) */
+  --radius-xs: 2px;
+  --radius-small: 4px;
+  --radius-medium: 8px;
+  --radius-large: 16px;
+  --radius-xlarge: 160px;
+
+  /* ==========================================================================
+     SIZING TOKENS
+     ========================================================================== */
+
+  /* Small Spacing Tokens */
+  --spacing-sm-1: var(--space-sm-1, 8px);
+  --spacing-sm-2: var(--space-sm-2, 10px);
+  --spacing-sm-3: 12px;
+  --spacing-sm-4: 16px;
+  --spacing-sm-5: 20px;
+
+  /* Medium Spacing Tokens */
+  --spacing-md-1: 24px;
+  --spacing-md-2: 32px;
+  --spacing-md-3: var(--space-md-3, 40px);
+  --spacing-md-4: var(--space-md-4, 48px);
+  --spacing-md-5: 56px;
+  --spacing-md-6: var(--space-md-6, 64px);
+  --spacing-md-7: var(--space-md-7, 72px);
+  --spacing-md-8: var(--space-md-8, 80px);
+
+  /* Large Spacing Tokens */
+  --spacing-lg-1: var(--space-lg-1, 88px);
+  --spacing-lg-2: var(--space-lg-2, 96px);
+  --spacing-lg-3: var(--space-lg-3, 104px);
+  --spacing-lg-4: var(--space-lg-4, 112px);
+  --spacing-lg-5: var(--space-lg-5, 120px);
+  --spacing-lg-6: var(--space-lg-6, 128px);
+  --spacing-lg-7: var(--space-lg-7, 136px);
+  --spacing-lg-8: var(--space-lg-8, 144px);
+  --spacing-lg-9: var(--space-lg-9, 152px);
+  --spacing-lg-10: var(--space-lg-10, 160px);
+
+  /* XLarge Spacing Tokens */
+  --spacing-xl-1: var(--space-xl-1, 168px);
+  --spacing-xl-2: var(--space-xl-2, 176px);
+  --spacing-xl-3: var(--space-xl-3, 184px);
+  --spacing-xl-4: var(--space-xl-4, 192px);
+  --spacing-xl-5: var(--space-xl-5, 200px);
+  --spacing-xl-6: var(--space-xl-6, 208px);
+  --spacing-xl-7: var(--space-xl-7, 216px);
+  --spacing-xl-8: var(--space-xl-8, 224px);
+  --spacing-xl-9: var(--space-xl-9, 232px);
+  --spacing-xl-10: var(--space-xl-10, 240px);
+
+  /* ==========================================================================
+     BUTTON CTA
+     ========================================================================== */
+
+  /* Button CTA Typography */
+  --cta-font-family: 'Zoho Puvi', sans-serif;
+  --cta-font-weight: 500;
+  --cta-text-align: center;
+  --cta-letter-spacing-xs: -0.16px;
+  --cta-letter-spacing-sm: -0.16px;
+  --cta-letter-spacing-md: -0.2px;
+  --cta-letter-spacing-lg: -0.24px;
+
+  /* Button CTA Icon */
+  --cta-icon-size: 24px;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY UTILITY CLASSES
+   ========================================================================== */
+
+/* Heading Utility Classes */
+.h1-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h1-font-size);
+  line-height: var(--heading-h1-line-height);
+  font-weight: var(--heading-h1-regular-font-weight);
+  letter-spacing: var(--heading-h1-regular-letter-spacing);
+}
+
+.h1-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h1-font-size);
+  line-height: var(--heading-h1-line-height);
+  font-weight: var(--heading-h1-medium-font-weight);
+  letter-spacing: var(--heading-h1-medium-letter-spacing);
+}
+
+.h1-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h1-font-size);
+  line-height: var(--heading-h1-line-height);
+  font-weight: var(--heading-h1-semibold-font-weight);
+  letter-spacing: var(--heading-h1-semibold-letter-spacing);
+}
+
+.h1-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h1-font-size);
+  line-height: var(--heading-h1-line-height);
+  font-weight: var(--heading-h1-bold-font-weight);
+  letter-spacing: var(--heading-h1-bold-letter-spacing);
+}
+
+.h2-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h2-font-size);
+  line-height: var(--heading-h2-line-height);
+  font-weight: var(--heading-h2-regular-font-weight);
+  letter-spacing: var(--heading-h2-regular-letter-spacing);
+}
+
+.h2-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h2-font-size);
+  line-height: var(--heading-h2-line-height);
+  font-weight: var(--heading-h2-medium-font-weight);
+  letter-spacing: var(--heading-h2-medium-letter-spacing);
+}
+
+.h2-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h2-font-size);
+  line-height: var(--heading-h2-line-height);
+  font-weight: var(--heading-h2-semibold-font-weight);
+  letter-spacing: var(--heading-h2-semibold-letter-spacing);
+}
+
+.h2-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h2-font-size);
+  line-height: var(--heading-h2-line-height);
+  font-weight: var(--heading-h2-bold-font-weight);
+  letter-spacing: var(--heading-h2-bold-letter-spacing);
+}
+
+.h3-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h3-font-size);
+  line-height: var(--heading-h3-line-height);
+  font-weight: var(--heading-h3-regular-font-weight);
+  letter-spacing: var(--heading-h3-regular-letter-spacing);
+}
+
+.h3-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h3-font-size);
+  line-height: var(--heading-h3-line-height);
+  font-weight: var(--heading-h3-medium-font-weight);
+  letter-spacing: var(--heading-h3-medium-letter-spacing);
+}
+
+.h3-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h3-font-size);
+  line-height: var(--heading-h3-line-height);
+  font-weight: var(--heading-h3-semibold-font-weight);
+  letter-spacing: var(--heading-h3-semibold-letter-spacing);
+}
+
+.h3-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h3-font-size);
+  line-height: var(--heading-h3-line-height);
+  font-weight: var(--heading-h3-bold-font-weight);
+  letter-spacing: var(--heading-h3-bold-letter-spacing);
+}
+
+.h4-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h4-font-size);
+  line-height: var(--heading-h4-line-height);
+  font-weight: var(--heading-h4-regular-font-weight);
+  letter-spacing: var(--heading-h4-regular-letter-spacing);
+}
+
+.h4-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h4-font-size);
+  line-height: var(--heading-h4-line-height);
+  font-weight: var(--heading-h4-medium-font-weight);
+  letter-spacing: var(--heading-h4-medium-letter-spacing);
+}
+
+.h4-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h4-font-size);
+  line-height: var(--heading-h4-line-height);
+  font-weight: var(--heading-h4-semibold-font-weight);
+  letter-spacing: var(--heading-h4-semibold-letter-spacing);
+}
+
+.h4-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h4-font-size);
+  line-height: var(--heading-h4-line-height);
+  font-weight: var(--heading-h4-bold-font-weight);
+  letter-spacing: var(--heading-h4-bold-letter-spacing);
+}
+
+.h5-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h5-font-size);
+  line-height: var(--heading-h5-line-height);
+  font-weight: var(--heading-h5-regular-font-weight);
+  letter-spacing: var(--heading-h5-regular-letter-spacing);
+}
+
+.h5-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h5-font-size);
+  line-height: var(--heading-h5-line-height);
+  font-weight: var(--heading-h5-medium-font-weight);
+  letter-spacing: var(--heading-h5-medium-letter-spacing);
+}
+
+.h5-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h5-font-size);
+  line-height: var(--heading-h5-line-height);
+  font-weight: var(--heading-h5-semibold-font-weight);
+  letter-spacing: var(--heading-h5-semibold-letter-spacing);
+}
+
+.h5-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h5-font-size);
+  line-height: var(--heading-h5-line-height);
+  font-weight: var(--heading-h5-bold-font-weight);
+  letter-spacing: var(--heading-h5-bold-letter-spacing);
+}
+
+.h6-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h6-font-size);
+  line-height: var(--heading-h6-line-height);
+  font-weight: var(--heading-h6-regular-font-weight);
+  letter-spacing: var(--heading-h6-regular-letter-spacing);
+}
+
+.h6-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h6-font-size);
+  line-height: var(--heading-h6-line-height);
+  font-weight: var(--heading-h6-medium-font-weight);
+  letter-spacing: var(--heading-h6-medium-letter-spacing);
+}
+
+.h6-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h6-font-size);
+  line-height: var(--heading-h6-line-height);
+  font-weight: var(--heading-h6-semibold-font-weight);
+  letter-spacing: var(--heading-h6-semibold-letter-spacing);
+}
+
+.h6-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--heading-h6-font-size);
+  line-height: var(--heading-h6-line-height);
+  font-weight: var(--heading-h6-bold-font-weight);
+  letter-spacing: var(--heading-h6-bold-letter-spacing);
+}
+
+/* Paragraph Utility Classes */
+.body-large-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-large-font-size);
+  line-height: var(--paragraph-large-line-height);
+  font-weight: var(--paragraph-large-regular-font-weight);
+  letter-spacing: var(--paragraph-large-regular-letter-spacing);
+}
+
+.body-large-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-large-font-size);
+  line-height: var(--paragraph-large-line-height);
+  font-weight: var(--paragraph-large-medium-font-weight);
+  letter-spacing: var(--paragraph-large-medium-letter-spacing);
+}
+
+.body-large-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-large-font-size);
+  line-height: var(--paragraph-large-line-height);
+  font-weight: var(--paragraph-large-semibold-font-weight);
+  letter-spacing: var(--paragraph-large-semibold-letter-spacing);
+}
+
+.body-large-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-large-font-size);
+  line-height: var(--paragraph-large-line-height);
+  font-weight: var(--paragraph-large-bold-font-weight);
+  letter-spacing: var(--paragraph-large-bold-letter-spacing);
+}
+
+.body-medium-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-medium-font-size);
+  line-height: var(--paragraph-medium-line-height);
+  font-weight: var(--paragraph-medium-regular-font-weight);
+  letter-spacing: var(--paragraph-medium-regular-letter-spacing);
+}
+
+.body-medium-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-medium-font-size);
+  line-height: var(--paragraph-medium-line-height);
+  font-weight: var(--paragraph-medium-medium-font-weight);
+  letter-spacing: var(--paragraph-medium-medium-letter-spacing);
+}
+
+.body-medium-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-medium-font-size);
+  line-height: var(--paragraph-medium-line-height);
+  font-weight: var(--paragraph-medium-semibold-font-weight);
+  letter-spacing: var(--paragraph-medium-semibold-letter-spacing);
+}
+
+.body-medium-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-medium-font-size);
+  line-height: var(--paragraph-medium-line-height);
+  font-weight: var(--paragraph-medium-bold-font-weight);
+  letter-spacing: var(--paragraph-medium-bold-letter-spacing);
+}
+
+.body-regular-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-regular-font-size);
+  line-height: var(--paragraph-regular-line-height);
+  font-weight: var(--paragraph-regular-regular-font-weight);
+  letter-spacing: var(--paragraph-regular-regular-letter-spacing);
+}
+
+.body-regular-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-regular-font-size);
+  line-height: var(--paragraph-regular-line-height);
+  font-weight: var(--paragraph-regular-medium-font-weight);
+  letter-spacing: var(--paragraph-regular-medium-letter-spacing);
+}
+
+.body-regular-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-regular-font-size);
+  line-height: var(--paragraph-regular-line-height);
+  font-weight: var(--paragraph-regular-semibold-font-weight);
+  letter-spacing: var(--paragraph-regular-semibold-letter-spacing);
+}
+
+.body-regular-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-regular-font-size);
+  line-height: var(--paragraph-regular-line-height);
+  font-weight: var(--paragraph-regular-bold-font-weight);
+  letter-spacing: var(--paragraph-regular-bold-letter-spacing);
+}
+
+.body-small-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-small-font-size);
+  line-height: var(--paragraph-small-line-height);
+  font-weight: var(--paragraph-small-regular-font-weight);
+  letter-spacing: var(--paragraph-small-regular-letter-spacing);
+}
+
+.body-small-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-small-font-size);
+  line-height: var(--paragraph-small-line-height);
+  font-weight: var(--paragraph-small-medium-font-weight);
+  letter-spacing: var(--paragraph-small-medium-letter-spacing);
+}
+
+.body-small-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-small-font-size);
+  line-height: var(--paragraph-small-line-height);
+  font-weight: var(--paragraph-small-semibold-font-weight);
+  letter-spacing: var(--paragraph-small-semibold-letter-spacing);
+}
+
+.body-small-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-small-font-size);
+  line-height: var(--paragraph-small-line-height);
+  font-weight: var(--paragraph-small-bold-font-weight);
+  letter-spacing: var(--paragraph-small-bold-letter-spacing);
+}
+
+.body-x-small-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-x-small-font-size);
+  line-height: var(--paragraph-x-small-line-height);
+  font-weight: var(--paragraph-x-small-regular-font-weight);
+  letter-spacing: var(--paragraph-x-small-regular-letter-spacing);
+}
+
+.body-x-small-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-x-small-font-size);
+  line-height: var(--paragraph-x-small-line-height);
+  font-weight: var(--paragraph-x-small-medium-font-weight);
+  letter-spacing: var(--paragraph-x-small-medium-letter-spacing);
+}
+
+.body-x-small-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-x-small-font-size);
+  line-height: var(--paragraph-x-small-line-height);
+  font-weight: var(--paragraph-x-small-semibold-font-weight);
+  letter-spacing: var(--paragraph-x-small-semibold-letter-spacing);
+}
+
+.body-x-small-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-x-small-font-size);
+  line-height: var(--paragraph-x-small-line-height);
+  font-weight: var(--paragraph-x-small-bold-font-weight);
+  letter-spacing: var(--paragraph-x-small-bold-letter-spacing);
+}
+
+.caption-regular {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-tiny-font-size);
+  line-height: var(--paragraph-tiny-line-height);
+  font-weight: var(--paragraph-tiny-regular-font-weight);
+  letter-spacing: var(--paragraph-tiny-regular-letter-spacing);
+}
+
+.caption-medium {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-tiny-font-size);
+  line-height: var(--paragraph-tiny-line-height);
+  font-weight: var(--paragraph-tiny-medium-font-weight);
+  letter-spacing: var(--paragraph-tiny-medium-letter-spacing);
+}
+
+.caption-semibold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-tiny-font-size);
+  line-height: var(--paragraph-tiny-line-height);
+  font-weight: var(--paragraph-tiny-semibold-font-weight);
+  letter-spacing: var(--paragraph-tiny-semibold-letter-spacing);
+}
+
+.caption-bold {
+  font-family: var(--font-family-zoho-puvi);
+  font-size: var(--paragraph-tiny-font-size);
+  line-height: var(--paragraph-tiny-line-height);
+  font-weight: var(--paragraph-tiny-bold-font-weight);
+  letter-spacing: var(--paragraph-tiny-bold-letter-spacing);
+}
+
+/* ==========================================================================
+   GRID SYSTEM UTILITY CLASSES
+   ========================================================================== */
+
+/* Grid Container */
+.grid-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--grid-margin);
+  padding-right: var(--grid-margin);
+}
+
+/* Desktop Grid */
+@media (min-width: 1720px) {
+  .grid-container {
+    max-width: var(--grid-desktop-container-width);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-desktop-columns), var(--grid-desktop-column-width));
+    gap: var(--grid-desktop-gutter);
+    justify-content: center;
+  }
+}
+
+/* Desktop Medium Grid */
+@media (min-width: 1400px) and (max-width: 1719px) {
+  .grid-container {
+    max-width: var(--grid-desktop-medium-container-width);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-desktop-medium-columns), var(--grid-desktop-medium-column-width));
+    gap: var(--grid-desktop-medium-gutter);
+    justify-content: center;
+  }
+}
+
+/* Desktop Small Grid */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .grid-container {
+    max-width: var(--grid-desktop-small-container-width);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-desktop-small-columns), var(--grid-desktop-small-column-width));
+    gap: var(--grid-desktop-small-gutter);
+    justify-content: center;
+  }
+}
+
+/* Tablet Grid */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .grid-container {
+    max-width: var(--grid-tablet-container-width);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-tablet-columns), var(--grid-tablet-column-width));
+    gap: var(--grid-tablet-gutter);
+    justify-content: center;
+  }
+}
+
+/* Tablet Small Grid */
+@media (min-width: 768px) and (max-width: 991px) {
+  .grid-container {
+    max-width: var(--grid-tablet-small-container-width);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-tablet-small-columns), var(--grid-tablet-small-column-width));
+    gap: var(--grid-tablet-small-gutter);
+    justify-content: center;
+  }
+}
+
+/* Mobile Grid */
+@media (min-width: 576px) and (max-width: 767px) {
+  .grid-container {
+    max-width: var(--grid-mobile-container-width);
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-mobile-columns), var(--grid-mobile-column-width));
+    gap: var(--grid-mobile-gutter);
+    justify-content: center;
+  }
+}
+
+/* Grid Column Span Utilities */
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+/* ==========================================================================
+   ELEVATION & RADIUS UTILITY CLASSES
+   ========================================================================== */
+
+/* Elevation Utility Classes */
+.elevation-xs {
+  box-shadow: var(--elevation-xs);
+}
+
+.elevation-small {
+  box-shadow: var(--elevation-small);
+}
+
+.elevation-medium {
+  box-shadow: var(--elevation-medium);
+}
+
+.elevation-large {
+  box-shadow: var(--elevation-large);
+}
+
+.elevation-xlarge {
+  box-shadow: var(--elevation-xlarge);
+}
+
+/* Radius Utility Classes */
+.radius-xs {
+  border-radius: var(--radius-xs);
+}
+
+.radius-small {
+  border-radius: var(--radius-small);
+}
+
+.radius-medium {
+  border-radius: var(--radius-medium);
+}
+
+.radius-large {
+  border-radius: var(--radius-large);
+}
+
+.radius-xlarge {
+  border-radius: var(--radius-xlarge);
+}
+
+/* Common Combinations */
+.card {
+  box-shadow: var(--elevation-small);
+  border-radius: var(--radius-small);
+}
+
+.modal {
+  box-shadow: var(--elevation-large);
+  border-radius: var(--radius-medium);
+}
+
+.button {
+  box-shadow: var(--elevation-xs);
+  border-radius: var(--radius-small);
+}
+
+.pill {
+  box-shadow: var(--elevation-xs);
+  border-radius: var(--radius-xlarge);
+}
+
+/* ==========================================================================
+   SIZING TOKENS UTILITY CLASSES
+   ========================================================================== */
+
+/* Spacing Utility Classes */
+.spacing-sm-1 { margin: var(--spacing-sm-1); }
+.spacing-sm-2 { margin: var(--spacing-sm-2); }
+.spacing-sm-3 { margin: var(--spacing-sm-3); }
+.spacing-sm-4 { margin: var(--spacing-sm-4); }
+.spacing-sm-5 { margin: var(--spacing-sm-5); }
+
+.spacing-md-1 { margin: var(--spacing-md-1); }
+.spacing-md-2 { margin: var(--spacing-md-2); }
+.spacing-md-3 { margin: var(--spacing-md-3); }
+.spacing-md-4 { margin: var(--spacing-md-4); }
+.spacing-md-5 { margin: var(--spacing-md-5); }
+.spacing-md-6 { margin: var(--spacing-md-6); }
+.spacing-md-7 { margin: var(--spacing-md-7); }
+.spacing-md-8 { margin: var(--spacing-md-8); }
+
+.spacing-lg-1 { margin: var(--spacing-lg-1); }
+.spacing-lg-2 { margin: var(--spacing-lg-2); }
+.spacing-lg-3 { margin: var(--spacing-lg-3); }
+.spacing-lg-4 { margin: var(--spacing-lg-4); }
+.spacing-lg-5 { margin: var(--spacing-lg-5); }
+.spacing-lg-6 { margin: var(--spacing-lg-6); }
+.spacing-lg-7 { margin: var(--spacing-lg-7); }
+.spacing-lg-8 { margin: var(--spacing-lg-8); }
+.spacing-lg-9 { margin: var(--spacing-lg-9); }
+.spacing-lg-10 { margin: var(--spacing-lg-10); }
+
+.spacing-xl-1 { margin: var(--spacing-xl-1); }
+.spacing-xl-2 { margin: var(--spacing-xl-2); }
+.spacing-xl-3 { margin: var(--spacing-xl-3); }
+.spacing-xl-4 { margin: var(--spacing-xl-4); }
+.spacing-xl-5 { margin: var(--spacing-xl-5); }
+.spacing-xl-6 { margin: var(--spacing-xl-6); }
+.spacing-xl-7 { margin: var(--spacing-xl-7); }
+.spacing-xl-8 { margin: var(--spacing-xl-8); }
+.spacing-xl-9 { margin: var(--spacing-xl-9); }
+.spacing-xl-10 { margin: var(--spacing-xl-10); }
+
+/* Padding Utilities */
+.p-sm-1 { padding: var(--spacing-sm-1); }
+.p-sm-2 { padding: var(--spacing-sm-2); }
+.p-sm-3 { padding: var(--spacing-sm-3); }
+.p-sm-4 { padding: var(--spacing-sm-4); }
+.p-sm-5 { padding: var(--spacing-sm-5); }
+
+.p-md-1 { padding: var(--spacing-md-1); }
+.p-md-2 { padding: var(--spacing-md-2); }
+.p-md-3 { padding: var(--spacing-md-3); }
+.p-md-4 { padding: var(--spacing-md-4); }
+.p-md-5 { padding: var(--spacing-md-5); }
+
+/* Gap Utilities */
+.gap-sm-1 { gap: var(--spacing-sm-1); }
+.gap-sm-2 { gap: var(--spacing-sm-2); }
+.gap-sm-3 { gap: var(--spacing-sm-3); }
+.gap-sm-4 { gap: var(--spacing-sm-4); }
+.gap-sm-5 { gap: var(--spacing-sm-5); }
+
+.gap-md-1 { gap: var(--spacing-md-1); }
+.gap-md-2 { gap: var(--spacing-md-2); }
+.gap-md-3 { gap: var(--spacing-md-3); }
+.gap-md-4 { gap: var(--spacing-md-4); }
+.gap-md-5 { gap: var(--spacing-md-5); }
+
+/* ==========================================================================
+   BUTTON CTA CLASSES
+   ========================================================================== */
+
+/* Base Button CTA Styles */
+.button-cta {
+  font-family: var(--cta-font-family);
+  font-weight: var(--cta-font-weight);
+  text-align: var(--cta-text-align);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button-cta:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Button CTA Primary - Extra Small */
+.button-cta-primary-xs {
+  padding: 12px 16px;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: #0047FF;
+  color: #FFFFFF;
+  letter-spacing: var(--cta-letter-spacing-xs);
+}
+
+.button-cta-primary-xs:hover {
+  background-color: #003ACC;
+}
+
+.button-cta-primary-xs:active {
+  background-color: #012B99;
+}
+
+/* Button CTA Primary - Small */
+.button-cta-primary-sm {
+  padding: 16px 24px;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  height: 56px;
+  background-color: #0047FF;
+  color: #FFFFFF;
+  letter-spacing: var(--cta-letter-spacing-sm);
+}
+
+.button-cta-primary-sm:hover {
+  background-color: #003ACC;
+}
+
+.button-cta-primary-sm:active {
+  background-color: #012B99;
+}
+
+/* Button CTA Primary - Medium */
+.button-cta-primary-md {
+  padding: 20px 24px;
+  gap: 12px;
+  font-size: 20px;
+  line-height: 28px;
+  border-radius: 4px;
+  background-color: #0047FF;
+  color: #FFFFFF;
+  letter-spacing: var(--cta-letter-spacing-md);
+}
+
+.button-cta-primary-md:hover {
+  background-color: #003ACC;
+}
+
+.button-cta-primary-md:active {
+  background-color: #012B99;
+}
+
+/* Button CTA Primary - Large */
+.button-cta-primary-lg {
+  padding: 24px 32px;
+  gap: 12px;
+  font-size: 24px;
+  line-height: 32px;
+  border-radius: 4px;
+  background-color: #0047FF;
+  color: #FFFFFF;
+  letter-spacing: var(--cta-letter-spacing-lg);
+}
+
+.button-cta-primary-lg:hover {
+  background-color: #003ACC;
+}
+
+.button-cta-primary-lg:active {
+  background-color: #012B99;
+}
+
+/* Button CTA Primary Line - Extra Small */
+.button-cta-primary-line-xs {
+  padding: 12px 16px;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #0047FF;
+  border: 2px solid #0047FF;
+  letter-spacing: var(--cta-letter-spacing-xs);
+}
+
+.button-cta-primary-line-xs:hover {
+  background-color: rgba(7, 7, 180, 0.1);
+  color: #0A0AFF;
+  border-color: rgba(10, 10, 255, 0.8);
+}
+
+.button-cta-primary-line-xs:active {
+  background-color: rgba(7, 7, 180, 0.2);
+  color: #0A0AFF;
+  border-color: rgba(10, 10, 255, 0.8);
+}
+
+/* Button CTA Primary Line - Small */
+.button-cta-primary-line-sm {
+  padding: 16px 24px;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  height: 56px;
+  background-color: transparent;
+  color: #0047FF;
+  border: 2px solid #0047FF;
+  letter-spacing: var(--cta-letter-spacing-sm);
+}
+
+.button-cta-primary-line-sm:hover {
+  background-color: rgba(7, 7, 180, 0.1);
+  color: #0A0AFF;
+  border-color: rgba(10, 10, 255, 0.8);
+}
+
+.button-cta-primary-line-sm:active {
+  background-color: rgba(7, 7, 180, 0.2);
+  color: #0A0AFF;
+  border-color: rgba(10, 10, 255, 0.8);
+}
+
+/* Button CTA Primary Line - Medium */
+.button-cta-primary-line-md {
+  padding: 20px 24px;
+  gap: 12px;
+  font-size: 20px;
+  line-height: 28px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #0047FF;
+  border: 2px solid #0047FF;
+  letter-spacing: var(--cta-letter-spacing-md);
+}
+
+.button-cta-primary-line-md:hover {
+  background-color: rgba(7, 7, 180, 0.1);
+  color: #0A0AFF;
+  border-color: rgba(10, 10, 255, 0.8);
+}
+
+.button-cta-primary-line-md:active {
+  background-color: rgba(7, 7, 180, 0.2);
+  color: #0A0AFF;
+  border-color: rgba(10, 10, 255, 0.8);
+}
+
+/* Button CTA Primary Line - Large */
+.button-cta-primary-line-lg {
+  padding: 24px 32px;
+  gap: 12px;
+  font-size: 24px;
+  line-height: 32px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #0047FF;
+  border: 2px solid #0047FF;
+  letter-spacing: var(--cta-letter-spacing-lg);
+}
+
+.button-cta-primary-line-lg:hover {
+  background-color: rgba(7, 7, 180, 0.1);
+  color: #0A0AFF;
+  border-color: rgba(10, 10, 255, 0.8);
+}
+
+.button-cta-primary-line-lg:active {
+  background-color: rgba(7, 7, 180, 0.2);
+  color: #0A0AFF;
+  border-color: rgba(10, 10, 255, 0.8);
+}
+
+/* Button CTA Secondary - Extra Small */
+.button-cta-secondary-xs {
+  padding: 12px 16px;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #FFFFFF;
+  letter-spacing: var(--cta-letter-spacing-xs);
+}
+
+.button-cta-secondary-xs:hover {
+  background-color: #383838;
+}
+
+.button-cta-secondary-xs:active {
+  background-color: #262626;
+}
+
+/* Button CTA Secondary - Small */
+.button-cta-secondary-sm {
+  padding: 16px 24px;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  height: 56px;
+  background-color: #000000;
+  color: #FFFFFF;
+  letter-spacing: var(--cta-letter-spacing-sm);
+}
+
+.button-cta-secondary-sm:hover {
+  background-color: #383838;
+}
+
+.button-cta-secondary-sm:active {
+  background-color: #262626;
+}
+
+/* Button CTA Secondary - Medium */
+.button-cta-secondary-md {
+  padding: 20px 24px;
+  gap: 12px;
+  font-size: 20px;
+  line-height: 28px;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #FFFFFF;
+  letter-spacing: var(--cta-letter-spacing-md);
+}
+
+.button-cta-secondary-md:hover {
+  background-color: #383838;
+}
+
+.button-cta-secondary-md:active {
+  background-color: #262626;
+}
+
+/* Button CTA Secondary - Large */
+.button-cta-secondary-lg {
+  padding: 24px 32px;
+  gap: 12px;
+  font-size: 24px;
+  line-height: 32px;
+  border-radius: 4px;
+  background-color: #000000;
+  color: #FFFFFF;
+  letter-spacing: var(--cta-letter-spacing-lg);
+}
+
+.button-cta-secondary-lg:hover {
+  background-color: #383838;
+}
+
+.button-cta-secondary-lg:active {
+  background-color: #262626;
+}
+
+/* Button CTA Secondary Line - Extra Small */
+.button-cta-secondary-line-xs {
+  padding: 12px 16px;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: var(--cta-letter-spacing-xs);
+}
+
+.button-cta-secondary-line-xs:hover {
+  background-color: #EBEBEB;
+}
+
+.button-cta-secondary-line-xs:active {
+  background-color: #D1D1D1;
+}
+
+/* Button CTA Secondary Line - Small */
+.button-cta-secondary-line-sm {
+  padding: 16px 24px;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  height: 56px;
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: var(--cta-letter-spacing-sm);
+}
+
+.button-cta-secondary-line-sm:hover {
+  background-color: #EBEBEB;
+}
+
+.button-cta-secondary-line-sm:active {
+  background-color: #D1D1D1;
+}
+
+/* Button CTA Secondary Line - Medium */
+.button-cta-secondary-line-md {
+  padding: 20px 24px;
+  gap: 12px;
+  font-size: 20px;
+  line-height: 28px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: var(--cta-letter-spacing-md);
+}
+
+.button-cta-secondary-line-md:hover {
+  background-color: #EBEBEB;
+}
+
+.button-cta-secondary-line-md:active {
+  background-color: #D1D1D1;
+}
+
+/* Button CTA Secondary Line - Large */
+.button-cta-secondary-line-lg {
+  padding: 24px 32px;
+  gap: 12px;
+  font-size: 24px;
+  line-height: 32px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: var(--cta-letter-spacing-lg);
+}
+
+.button-cta-secondary-line-lg:hover {
+  background-color: #EBEBEB;
+}
+
+.button-cta-secondary-line-lg:active {
+  background-color: #D1D1D1;
+}
+
+/* Button CTA Tertiary - Extra Small */
+.button-cta-tertiary-xs {
+  padding: 12px 16px;
+  gap: 16px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: var(--cta-letter-spacing-xs);
+}
+
+.button-cta-tertiary-xs:hover {
+  background-color: #F5F5F5;
+}
+
+.button-cta-tertiary-xs:active {
+  background-color: #EBEBEB;
+}
+
+/* Button CTA Tertiary - Small */
+.button-cta-tertiary-sm {
+  padding: 16px 24px;
+  gap: 12px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 4px;
+  height: 56px;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: var(--cta-letter-spacing-sm);
+}
+
+.button-cta-tertiary-sm:hover {
+  background-color: #F5F5F5;
+}
+
+.button-cta-tertiary-sm:active {
+  background-color: #EBEBEB;
+}
+
+/* Button CTA Tertiary - Medium */
+.button-cta-tertiary-md {
+  padding: 20px 24px;
+  gap: 12px;
+  font-size: 20px;
+  line-height: 28px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: var(--cta-letter-spacing-md);
+}
+
+.button-cta-tertiary-md:hover {
+  background-color: #F5F5F5;
+}
+
+.button-cta-tertiary-md:active {
+  background-color: #EBEBEB;
+}
+
+/* Button CTA Tertiary - Large */
+.button-cta-tertiary-lg {
+  padding: 24px 32px;
+  gap: 12px;
+  font-size: 24px;
+  line-height: 32px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 2px solid #000000;
+  letter-spacing: var(--cta-letter-spacing-lg);
+}
+
+.button-cta-tertiary-lg:hover {
+  background-color: #F5F5F5;
+}
+
+.button-cta-tertiary-lg:active {
+  background-color: #EBEBEB;
+}
+
+/* Button CTA Icon */
+.button-cta-icon {
+  width: var(--cta-icon-size);
+  height: var(--cta-icon-size);
+  flex-shrink: 0;
+}
+
+.button-cta-icon-left {
+  order: -1;
+}
+
+.button-cta-icon-right {
+  order: 1;
+}
+
