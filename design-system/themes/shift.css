@@ -1,0 +1,198 @@
+/**
+ * Shift Theme — Complete Palette
+ *
+ * Mirrors design-skills-marketplace/design-system/themes/shift.json.
+ * Every Shift colour token is available, plus semantic mappings for
+ * brand, foreground text, and lines.
+ *
+ * Loaded ON TOP OF design-system/ods-design-system.css.
+ *
+ * Load order on every Shift page:
+ *   1. design-system/ods-design-system.css  (Zoho-wide base)
+ *   2. design-system/themes/shift.css       (this file)
+ *
+ * Token naming convention:
+ *   --<family>-<shade>   — raw Shift palette (--primary-500, --gray-400, etc.)
+ *   --brand, --secondary, --fg-*, --line   — semantic mappings
+ *
+ * What this file does NOT touch:
+ *   - --cta or any CTA token (CTAs stay ODS blue across all products)
+ *   - --canvas (white, same on every product)
+ *   - --success, --warning, --error, --info (universal status colors)
+ *   - Typography, spacing, radius (Zoho-wide, in ods-design-system.css)
+ *
+ * Source: design-skills-marketplace/design-system/themes/shift.json
+ */
+
+ :root {
+    /* ─── Primary (Shift indigo) ───────────────────────────────────────── */
+    --primary-50:  #EEF0FB;
+    --primary-100: #DCE0F7;
+    --primary-200: #B4BCEE;
+    --primary-300: #8C97E5;
+    --primary-400: #6470DC;
+    --primary-500: #3940D0;
+    --primary-600: #2F35B0;
+    --primary-700: #252A8A;
+    --primary-800: #1B1F64;
+    --primary-850: #161B63;
+    --primary-900: #12143F;
+    --primary-950: #080924;
+  
+    /* ─── Gray ─────────────────────────────────────────────────────────── */
+    --gray-50:  #E7E8EE;
+    --gray-100: #C8CAD5;
+    --gray-200: #9497AE;
+    --gray-300: #5F6488;
+    --gray-400: #343A66;
+    --gray-500: #0B0E2A;
+    --gray-600: #090C24;
+    --gray-700: #07091D;
+    --gray-800: #050716;
+    --gray-900: #03040E;
+    --gray-950: #010106;
+  
+    /* ─── Slate ────────────────────────────────────────────────────────── */
+    --slate-50:  #FAFBFE;
+    --slate-100: #F4F5FC;
+    --slate-200: #E8EAF6;
+    --slate-300: #D2D6EC;
+    --slate-400: #B5BAD8;
+    --slate-500: #969BC0;
+    --slate-600: #74799E;
+    --slate-700: #55597A;
+    --slate-800: #393C55;
+    --slate-900: #1F2133;
+    --slate-950: #0E0F1C;
+  
+    /* ─── Indigo ───────────────────────────────────────────────────────── */
+    --indigo-50:  #F0F2FF;
+    --indigo-100: #E0E4FF;
+    --indigo-200: #C3CAFF;
+    --indigo-300: #A0AAFC;
+    --indigo-400: #7A86F3;
+    --indigo-500: #5862E8;
+    --indigo-600: #4049DB;
+    --indigo-700: #3038B8;
+    --indigo-800: #222990;
+    --indigo-900: #161B63;
+    --indigo-950: #0B0E38;
+  
+    /* ─── Cyan ─────────────────────────────────────────────────────────── */
+    --cyan-50:  #E0F8FC;
+    --cyan-100: #B3EEF6;
+    --cyan-200: #80E3F0;
+    --cyan-300: #4DD7E9;
+    --cyan-400: #26CCE0;
+    --cyan-500: #00B4D2;
+    --cyan-600: #0093AC;
+    --cyan-700: #007286;
+    --cyan-800: #005260;
+    --cyan-900: #00313A;
+    --cyan-950: #00191D;
+  
+    /* ─── Sky ──────────────────────────────────────────────────────────── */
+    --sky-50:  #EEF3FF;
+    --sky-100: #DCE7FF;
+    --sky-200: #B9CEFF;
+    --sky-300: #95B5FF;
+    --sky-400: #78A0FF;
+    --sky-500: #5A8CFF;
+    --sky-600: #3E70E8;
+    --sky-700: #2A56BC;
+    --sky-800: #1B3D8C;
+    --sky-900: #0F255B;
+    --sky-950: #07142F;
+  
+    /* ─── Blue ─────────────────────────────────────────────────────────── */
+    --blue-50:  #E7EEFB;
+    --blue-100: #C3D4F6;
+    --blue-200: #8FAEED;
+    --blue-300: #5A87E4;
+    --blue-400: #3775E0;
+    --blue-500: #2264DC;
+    --blue-600: #1A53BA;
+    --blue-700: #144294;
+    --blue-800: #0D306E;
+    --blue-850: #1B3D8C;
+    --blue-900: #071D44;
+    --blue-950: #030F24;
+  
+    /* ─── Purple ───────────────────────────────────────────────────────── */
+    --purple-50:  #ECE9F6;
+    --purple-100: #C9BFE0;
+    --purple-200: #9889C4;
+    --purple-300: #6B55A7;
+    --purple-400: #3D2685;
+    --purple-500: #0A0046;
+    --purple-600: #08003A;
+    --purple-700: #06002E;
+    --purple-800: #040022;
+    --purple-900: #020016;
+    --purple-950: #01000B;
+  
+    /* ─── Green ────────────────────────────────────────────────────────── */
+    --green-50:  #E6FBF4;
+    --green-100: #BEF3DE;
+    --green-200: #86E9C3;
+    --green-300: #4EDDA8;
+    --green-400: #1FCC93;
+    --green-500: #05B488;
+    --green-600: #04936F;
+    --green-700: #037257;
+    --green-800: #02523F;
+    --green-900: #013227;
+    --green-950: #001914;
+  
+    /* ─── Red ──────────────────────────────────────────────────────────── */
+    --red-50:  #FDE7EC;
+    --red-100: #FAC0CC;
+    --red-200: #F4859C;
+    --red-300: #EC4A6D;
+    --red-400: #DB1F4A;
+    --red-500: #BA0530;
+    --red-600: #990428;
+    --red-700: #780320;
+    --red-800: #570217;
+    --red-900: #36010E;
+    --red-950: #1B0007;
+  
+    /* ─── Orange ───────────────────────────────────────────────────────── */
+    --orange-50:  #FEEDE3;
+    --orange-100: #FDCEB5;
+    --orange-200: #FAA57C;
+    --orange-300: #F67C43;
+    --orange-400: #EF6319;
+    --orange-500: #E14F06;
+    --orange-600: #B83F04;
+    --orange-700: #8E3003;
+    --orange-800: #652202;
+    --orange-900: #3D1401;
+    --orange-950: #1F0A00;
+  
+    /* ===================================================================
+       SEMANTIC MAPPINGS — what tokens are FOR
+       ===================================================================
+       Brand, foreground, and line tokens reference the raw scales above.
+       Use these names in your CSS unless you need a specific shade.
+       =================================================================== */
+  
+    /* ─── Brand ────────────────────────────────────────────────────────── */
+    --brand:                 var(--primary-500);   /* #3940D0 */
+    --brand-hover:           var(--primary-600);   /* #2F35B0 */
+    --secondary:             var(--primary-850);   /* #161B63 — dark theme surface */
+    --light-gradient-top:    var(--primary-200);   /* #B4BCEE */
+    --light-gradient-bottom: var(--primary-50);    /* #EEF0FB */
+  
+    /* ─── Foreground text ──────────────────────────────────────────────── */
+    --fg-primary:   var(--primary-850);   /* #161B63 — Headlines */
+    --fg-secondary: var(--gray-400);      /* #343A66 — Sub-headlines */
+    --fg-tertiary:  var(--slate-700);     /* #55597A — Body paragraphs */
+    --fg-muted:     var(--slate-500);     /* #969BC0 — Decorative / disabled — fails 4.5:1 */
+  
+    /* ─── Lines & borders ──────────────────────────────────────────────── */
+    --line:         var(--slate-300);     /* #D2D6EC — Card borders, neutral strokes
+                                             (visually equivalent to #D4D4D8 used in
+                                             the previous skill version) */
+    --line-active:  var(--brand);         /* Active flow paths, focus borders */
+  }
