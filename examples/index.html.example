@@ -6,10 +6,15 @@
 
   <!--
     REQUIRED: Import the design system stylesheet.
+    Path is relative to where this file lives.
+
+    From the project root: design-system/ods-design-system.css
+    From examples/ folder: ../design-system/ods-design-system.css
+
     All tokens (colors, typography, spacing, radius, CTA) come from this file.
     Do NOT redefine these values locally.
   -->
-  <link rel="stylesheet" href="ods-design-system.css">
+  <link rel="stylesheet" href="../design-system/ods-design-system.css">
 
   <title>Zoho Project — Reference Page</title>
 
